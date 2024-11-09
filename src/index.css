@@ -1,13 +1,374 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.mobile-container {
+  /* Define mobile-specific styles here */
+}
+
+.hero-banner .logo-wrapper img {
+  width: 100px;
+  /* Adjust as needed */
+}
+
+/* .hero-image-desktop img {
+  width: 100%;
+  height: auto;
+} */
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('https://assets.codepen.io/6060109/Poppins_regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("https://assets.codepen.io/6060109/Poppins_bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-style: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  --theme-color-black: #333333;
+  /* rgba(51, 51, 51, 1) */
+  --theme-color-brown: #423A3A;
+  --theme-color-red: #4059CF;
+  --theme-color-white: #FEFFFF;
+  /* rgba(254, 255, 255, 1) */
+}
+
+/* ---------- MAIN BODY DECLERATIONS ---------- */
+
+html,
+body {
+  background-color: var(--theme-color-white);
+  font-family: "Poppins";
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+}
+
+input {
+  font-family: 'Poppins';
+}
+
+.mobile-container {
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.hero-image-desktop {
+  display: none;
+}
+
+/* ---------- HERO BANNER DECLERATIONS ---------- */
+.hero-banner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-banner .logo-wrapper {
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: auto;
+}
+
+.logo-wrapper img {
+  display: block;
+  height: 4.5rem !important;
+  margin: 0 auto;
+  width: auto;
+}
+
+.hero-banner .hero-image {
+  background-image: url(./images/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 376px;
+  width: 100%;
+}
+
+/* ---------- TEXT INFO DECLERATIONS ---------- */
+.text-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.text-info>* {
+  padding: 0 2.5rem 0rem;
+}
+
+/* intended for the first h2 within .text-info */
+.text-info h2:nth-child(1) {
+  color: var(--theme-color-red);
+  font-weight: normal;
+  /* padding-top: 1.8rem;
+  padding-bottom: 1rem; */
+}
+
+.text-info h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--theme-color-brown);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.text-info p {
+  color: var(--theme-color-black);
+  line-height: 24px;
+}
+
+.text-info .email-signup {
+  margin: 1rem 0 6rem;
+  position: relative;
+  width: 100%;
+}
+
+.email-signup .email-input {
+  border: 1px solid rgba(51, 51, 51, .7);
+  border-radius: 3px;
+  padding: 1rem 1.5rem;
+  opacity: .5;
+  width: 100%;
+}
+
+.email-signup .email-input:focus {
+  background-color: var(--theme-color-white);
+  outline: 2px solid var(--theme-color-black);
+  opacity: 1;
+}
+
+.email-signup .email-submit {
+  background-color: var(--theme-color-black);
+  border-bottom: 1px solid var(--theme-color-black);
+  border-radius: 2px;
+  color: var(--theme-color-white);
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 1;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  right: 0;
+  margin-right: 2.5rem;
+  z-index: 10;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(./images/bgm.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 3.5rem;
+  }
+
+  .mobile-container {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .hero-banner .logo-wrapper {
+    margin-left: 3.5rem;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .logo-wrapper img {
+    margin: 0 0 0;
+    padding-left: 2.5rem;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .text-info {
+    text-align: left;
+    align-items: start;
+  }
+
+  .text-info h2 {
+    font-size: 4rem;
+  }
+
+  .text-info p {
+    font-size: 16px;
+  }
+
+  .text-info input {
+    font-size: 16px;
+  }
+
+  .text-info .email-signup {
+    margin: 1rem 0 7rem;
+  }
+
+  .hero-image-desktop {
+    display: block;
+    height: 100%;
+    width: 55vw;
+  }
+
+  .hero-image-desktop img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .email-signup .email-submit {
+    border-bottom: 2px solid var(--theme-color-black);
+  }
 }
