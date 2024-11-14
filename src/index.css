@@ -1,374 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-}
-
-.mobile-container {
-  /* Define mobile-specific styles here */
-}
-
-.hero-banner .logo-wrapper img {
-  width: 100px;
-  /* Adjust as needed */
-}
-
-/* .hero-image-desktop img {
-  width: 100%;
-  height: auto;
-} */
-
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url('https://assets.codepen.io/6060109/Poppins_regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("https://assets.codepen.io/6060109/Poppins_bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  border-style: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
-  --theme-color-black: #333333;
-  /* rgba(51, 51, 51, 1) */
-  --theme-color-brown: #423A3A;
-  --theme-color-red: #4059CF;
-  --theme-color-white: #FEFFFF;
-  /* rgba(254, 255, 255, 1) */
+  --bg-primary: #4FC3F7;
+  --bg-secondary: #F7F8F9;
+  --bg-gradient-start: #4FC3F7;
+  --bg-gradient-end: #00d6cc;
+  --white: #ffffff;
+  --input-border: #d1d5db;
+  --input-border-error: #ef4444;
+  --button-bg: #1a3865;
+  --button-bg-hover: #1d4ed8;
+  --text-primary: #1e293b;
+  --text-secondary: #607D8B;
+  --light-bg: #85DFF1;
+  --font-primary: 'Lora', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  --font-heading: 'Roboto', sans-serif;
 }
 
-/* ---------- MAIN BODY DECLERATIONS ---------- */
+/* Add this to your CSS file (e.g., styles.css) */
 
-html,
-body {
-  background-color: var(--theme-color-white);
-  font-family: "Poppins";
-  font-size: 14px;
-  height: 100%;
-  width: 100%;
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-input {
-  font-family: 'Poppins';
+.animate-gradient {
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
 }
 
-.mobile-container {
-  margin: 0 auto;
-  max-width: 500px;
-  min-width: 300px;
-}
-
-.hero-image-desktop {
-  display: none;
-}
-
-/* ---------- HERO BANNER DECLERATIONS ---------- */
-.hero-banner {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-banner .logo-wrapper {
-  height: auto;
-  margin: 0 auto;
-  padding: 1rem 0;
-  width: auto;
-}
-
-.logo-wrapper img {
-  display: block;
-  height: 4.5rem !important;
-  margin: 0 auto;
-  width: auto;
-}
-
-.hero-banner .hero-image {
-  background-image: url(./images/bg2.jpg);
-  background-size: cover;
+.bg-grad1 {
+  background: url(../public/images/bg-grad1.svg);
   background-repeat: no-repeat;
-  background-position: center;
-  height: 376px;
-  width: 100%;
+  background-position: 100%;
+  background-position-y: 0;
+  background-size: 65%;
+
 }
 
-/* ---------- TEXT INFO DECLERATIONS ---------- */
-.text-info {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 100%;
+.bg-grad2 {
+  background: url(../public/images/bg-gred2.svg);
+  background-repeat: no-repeat;
+  background-size: 97%;
+  background-position: 60% 100%;
+  background-color: var(--bg-secondary) !important;
 }
 
-.text-info>* {
-  padding: 0 2.5rem 0rem;
+.w-31 {
+  width:
+    25rem;
 }
 
-/* intended for the first h2 within .text-info */
-.text-info h2:nth-child(1) {
-  color: var(--theme-color-red);
-  font-weight: normal;
-  /* padding-top: 1.8rem;
-  padding-bottom: 1rem; */
+.h-31 {
+  height: 25rem;
 }
 
-.text-info h2 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: var(--theme-color-brown);
-  letter-spacing: 5px;
-  text-transform: uppercase;
+button {
+  box-shadow: 0px 4px 4px 0px #00000026;
 }
 
-.text-info p {
-  color: var(--theme-color-black);
-  line-height: 24px;
+@keyframes moveEdges {
+  0% {
+    d: path("M299.5 74.6489C189.864 120.225 12.9963 169.079 0.679728 172.463C0.245011 172.582 0 172.962 0 173.412V395.649C0 396.201 0.447721 396.649 1.00001 396.649H783.527C784.068 396.649 784.511 396.237 784.522 395.695C784.716 386.813 785.877 317.948 776.5 274.649C761.466 205.233 747.5 173.5 700 109.649C653.657 47.3529 609.737 5.22882 531.5 0.648922C435 -5.00005 410.5 28.5061 299.5 74.6489Z");
+  }
+
+  50% {
+    d: path("M305 74C195 120 10 160 5 170C0.5 172 0 173 0 174V400C0 400 0.5 400 1 400H785C785 400 785 400 785 400C785 385 790 320 775 280C760 205 750 175 710 110C660 50 610 10 530 5C435 0 420 30 305 75Z");
+  }
+
+  100% {
+    d: path("M299.5 74.6489C189.864 120.225 12.9963 169.079 0.679728 172.463C0.245011 172.582 0 172.962 0 173.412V395.649C0 396.201 0.447721 396.649 1.00001 396.649H783.527C784.068 396.649 784.511 396.237 784.522 395.695C784.716 386.813 785.877 317.948 776.5 274.649C761.466 205.233 747.5 173.5 700 109.649C653.657 47.3529 609.737 5.22882 531.5 0.648922C435 -5.00005 410.5 28.5061 299.5 74.6489Z");
+  }
 }
 
-.text-info .email-signup {
-  margin: 1rem 0 6rem;
+/* svg path {
+  animation: moveEdges 5s ease-in-out infinite;
+} */
+
+
+
+/* CSS for fading in the heading */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  /* Initially, the heading is slightly below */
+}
+
+/* Style the custom checkbox */
+input[type="checkbox"].custom-checkbox {
+  appearance: none;
+  width: 51px;
+  height: 27px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
   position: relative;
-  width: 100%;
-}
-
-.email-signup .email-input {
-  border: 1px solid rgba(51, 51, 51, .7);
-  border-radius: 3px;
-  padding: 1rem 1.5rem;
-  opacity: .5;
-  width: 100%;
-}
-
-.email-signup .email-input:focus {
-  background-color: var(--theme-color-white);
-  outline: 2px solid var(--theme-color-black);
-  opacity: 1;
-}
-
-.email-signup .email-submit {
-  background-color: var(--theme-color-black);
-  border-bottom: 1px solid var(--theme-color-black);
-  border-radius: 2px;
-  color: var(--theme-color-white);
+  transition: background-color 0.3s, border-color 0.3s;
   cursor: pointer;
-  font-weight: bold;
-  opacity: 1;
-  padding: 1rem 1.5rem;
-  position: absolute;
-  right: 0;
-  margin-right: 2.5rem;
-  z-index: 10;
+  /* width: 24px; */
+  /* height: 24px; */
+  /* top: 473px; */
+  /* left: 160px; */
+  gap: 0px;
+  border-radius: 4px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    background-image: url(./images/bgm.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-  }
+/* Style when the checkbox is checked */
+input[type="checkbox"].custom-checkbox:checked {
+  background-color: #3b82f6;
+  /* Blue background when checked */
+  border-color: #3b82f6;
+  /* Blue border when checked */
+}
 
-  main {
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    max-width: 100%;
-    margin: 0 auto;
-    padding-left: 3.5rem;
-  }
+/* Add a checkmark when checked */
+input[type="checkbox"].custom-checkbox:checked::before {
+  content: '\2713';
+  /* Unicode character for a checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  /* Customize the size of the checkmark */
+  color: white;
+  /* Color of the checkmark */
+}
 
-  .mobile-container {
-    width: 45vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
+/* Optional: Style when hovering over the checkbox */
+input[type="checkbox"].custom-checkbox:hover {
+  border-color: #3b82f6;
+  /* Change border color on hover */
+}
 
-  .hero-banner .logo-wrapper {
-    margin-left: 3.5rem;
-    width: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-  }
-
-  .logo-wrapper img {
-    margin: 0 0 0;
-    padding-left: 2.5rem;
-  }
-
-  .hero-image {
-    display: none;
-  }
-
-  .text-info {
-    text-align: left;
-    align-items: start;
-  }
-
-  .text-info h2 {
-    font-size: 4rem;
-  }
-
-  .text-info p {
-    font-size: 16px;
-  }
-
-  .text-info input {
-    font-size: 16px;
-  }
-
-  .text-info .email-signup {
-    margin: 1rem 0 7rem;
-  }
-
-  .hero-image-desktop {
-    display: block;
-    height: 100%;
-    width: 55vw;
-  }
-
-  .hero-image-desktop img {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .email-signup .email-submit {
-    border-bottom: 2px solid var(--theme-color-black);
-  }
+/* Add focus styles for accessibility */
+input[type="checkbox"].custom-checkbox:focus {
+  outline: none;
+  /* Remove default focus outline */
+  border-color: #2563eb;
+  /* Change border color on focus */
 }

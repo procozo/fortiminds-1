@@ -1,0 +1,64 @@
+/* Tailwind CSS utility classes have been used for convenience */
+/* Additional custom CSS if needed */
+
+.section {
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section .svg-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.section .content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section .content .heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.section .content .subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section .content .description {
+  font-size: 1rem;
+  color: #f0f0f0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .section .content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .section .content .heading {
+    font-size: 3rem;
+  }
+
+  .section .content .description {
+    margin-left: 2rem;
+  }
+}
