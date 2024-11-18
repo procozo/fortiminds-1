@@ -26,10 +26,7 @@ function CustomerSection() {
                 <div className="flex-1 text-center md:text-left ">
 
                     <p className="text-2xl text-black opacity-70 font-secondary font-regular md:w-11/12 lg:w-11/12 ">
-                        Vista automates your business application discovery,
-                        integrates progressive threat modeling across popular security
-                        solutions like CNAP and SAST, and delivers prioritized, actionable
-                        insights tailored to your organization’s unique environment.
+                        FortiMinds Vista automates your business application discovery, integrates progressive threat modeling across popular security solutions like CNAPP and Application Security, and delivers prioritized, actionable insights tailored to your organization's unique environment.
                     </p>
                 </div>
             </div>

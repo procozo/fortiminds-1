@@ -62,7 +62,8 @@ const CTA = () => {
                         Get a Demo
                     </h3>
                     <h2 className="text-4xl font-medium text-black opacity-85 mb-4 font-primary text-center md:text-left lg:text-left py-3 leading-extra-loose">
-                        Start your ASPM journey with us today
+                        Stay in the loop - Sign up
+                        today!
                     </h2>
                     <form onSubmit={handleSubmit} className="space-y-4">
                         {/* First Name */}

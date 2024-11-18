@@ -9,10 +9,10 @@ function Header() {
 
     return (
         // max-w-[83%]
-        <header className="w-full bg-bgPrimary text-buttonBg font-secondary relative p-8 md:px-24">
+        <header className="w-full bg-bgPrimary text-buttonBg font-secondary relative p-2 md:px-24">
             <div className=" mx-auto flex items-center justify-between p-6">
                 {/* <h1 className="text-2xl font-bold">FortiMinds</h1> */}
-                <img src="./images/FortiMinds logo horizontal@3x.svg" alt="" />
+                <img src="./images/FortiMinds Vista logo@3x.svg" className='h-[1.5rem] md:h-auto' alt="" />
 
                 {/* Desktop Menu */}
                 <div className="hidden text-lg md:flex items-center ml-auto space-x-8">
@@ -23,7 +23,7 @@ function Header() {
                     </nav>
 
                     <button className="px-4 py-2 bg-buttonBg text-white rounded hover:bg-gray-200 hover:bg-bgGradientEnd">
-                        <a href="#get A Demo" > Get a demo</a>
+                        <a href="#get A Demo" > Stay updated</a>
                     </button>
                 </div>
 
@@ -41,7 +41,7 @@ function Header() {
                     <a href="#about us" className="hover:underline text-left w-full px-8 ">About us</a>
                     <div className='w-full text-left'>
                         <button className="px-4 py-2 bg-buttonBg text-left  px-8 text-white font-secondary rounded hover:bg-gray-200">
-                            <a href="#get A Demo" > Get a demo</a>
+                            <a href="#get A Demo" > Stay updated</a>
                         </button>
                     </div>
                 </div>

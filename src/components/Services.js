@@ -24,8 +24,8 @@ const Services = () => {
             <h2 className="text-4xl font-medium text-gray-800 my-4 font-primary leading-extra-loose">
               We create products for security engineers like us.
             </h2>
-            <p className="text-black opacity-70 font-secondary font-normal text-md w-11/12 ">
-              With 100+ years of combined cybersecurity and engineering expertise, FortiMinds has crafted Vista - an ingenious ASPM platform built by security engineers, for security engineers.
+            <p className="text-black opacity-70 font-secondary font-light md:w-11/12 lg:w-11/12">
+              With over 100 years of the founding team's combined cybersecurity and engineering expertise, FortiMinds has created FortiMinds Vista--an innovative Application Security Posture Management (ASPM) platform designed by security engineers, for security engineers, with passion.
             </p>
           </div>
         </div>

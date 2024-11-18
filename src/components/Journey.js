@@ -31,10 +31,7 @@ const AspmJourney = () => {
                                     Accelerate your ASPM  <br></br>journey
                                 </h2>
                                 <p className="text-black opacity-70 font-secondary font-light md:w-11/12 lg:w-11/12">
-                                    Vista automates your business application discovery,
-                                    integrates progressive threat modeling across popular security
-                                    solutions like CNAP and SAST, and delivers prioritized, actionable
-                                    insights tailored to your organization’s unique environment.
+                                    Implementing digital security tools take from a week to 12 months depending on the complexity and size of the organization. FortiMinds Vista's engine discovers your business application automatically and guides your team to feed your unique business contexts with a breeze.
                                 </p>
                             </div>
                         </div>
@@ -51,7 +48,7 @@ const AspmJourney = () => {
                                     In control of your evolving  <br></br>security posture
                                 </h2>
                                 <p className="text-black opacity-70 font-secondary font-light md:w-11/12 lg:w-11/12">
-                                    Using Al and our 100+ years of the combined cybersecurity experience, Vista learns about your business applications, provides threat models evolving with continuous drift in security posture, and integrates seamlessly with your existing security tools.
+                                    Using Al and our extensive knowledge in cybersecurity and application development, FortiMinds Vista learns about your business applications, provides threat models evolving with continuous drift in security posture, and integrates seamlessly with your existing security tools
                                 </p>
                             </div>
                             {/* Left Section: Illustration */}
@@ -83,7 +80,7 @@ const AspmJourney = () => {
                                     Remediate with confidence <br></br> at speed
                                 </h2>
                                 <p className="text-black opacity-70 font-secondary font-light md:w-11/12 lg:w-11/12">
-                                    With FortiMinds Secure, you can reduce risks effectively and protect what matters most without overburdening your team.
+                                    With FortiMinds Vista, you can reduce risks effectively and protect what matters most without overburdening your team.
                                 </p>
                             </div>
                         </div>

@@ -13,10 +13,10 @@ function HeroSection() {
                 {/* Left Section */}
                 <div className="flex-1 text-center md:text-left">
                     <h1 className="text-6xl text-black opacity-85 mb-4 font-primary font-medium leading-extra-loose">
-                        Vista, <br /> a redefined ASPM
+                        FortiMinds Vista <br />  redefines ASPM
                     </h1>
                     <p className="text-xl md:text-2xl mb-6 text-black opacity-70 font-secondary">
-                        An AI-powered, tool-agnostic digital security solution created by FortiMinds
+                        An Al-powered, tool-agnostic Application Security Posture Management (ASP) created by FortiMinds
                     </p>
                 </div>
 
