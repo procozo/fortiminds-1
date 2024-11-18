@@ -10,7 +10,7 @@ const CTA = () => {
 
     const [errors, setErrors] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
-
+    const [responseMesage, setResponseMessage] = useState('')
     const validateForm = () => {
         const errors = {};
         if (!formData.firstName.trim()) {
@@ -40,17 +40,61 @@ const CTA = () => {
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const validationErrors = validateForm();
-        setErrors(validationErrors);
+    const handleSubmit = async (e) => {
 
-        if (Object.keys(validationErrors).length === 0) {
-            setIsSubmitted(true);
-            console.log(formData)
-            alert("Form submitted successfully!");
-            setFormData({ firstName: "", lastName: "", email: "", consent: false });
+
+
+        try {
+
+
+            e.preventDefault();
+            const validationErrors = validateForm();
+            setErrors(validationErrors);
+
+            if (Object.keys(validationErrors).length === 0) {
+
+                console.log(formData)
+
+                setFormData({ firstName: "", lastName: "", email: "", consent: false });
+
+
+                // Send data to Azure Function
+                const response = await fetch("https://fortimindsfunctionslist.azurewebsites.net/api/httpTrigger2?", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const data = await response.json();
+
+                if (data.status == 200) {
+                    setIsSubmitted(true);
+                    // alert("Form submitted successfully!");
+                    setResponseMessage("Form submitted successfully!");
+                    console.log("Response from server:", data);
+                    setFormData({ firstName: "", lastName: "", email: "", consent: false }); // Reset form
+                    setTimeout(() => {
+                        setIsSubmitted(false);
+                    }, 3000)
+                } else {
+                    setResponseMessage(data.error || "Error submitting form.");
+                    setTimeout(() => {
+                        setIsSubmitted(false);
+                    }, 3000)
+                }
+            }
+
+
+        } catch (error) {
+            console.error("Error:", error);
+            setResponseMessage("An error occurred while submitting the form.");
+        } finally {
+            // setIsSubmitted(false);
         }
+
+
     };
 
     return (
@@ -142,8 +186,8 @@ const CTA = () => {
                         </button>
                     </form>
                     {isSubmitted && (
-                        <p className="text-green-500 text-sm mt-4">
-                            Your form has been submitted successfully!
+                        <p className="text-white text-sm mt-4 bg-black p-2 text-center font-secondary font-light opacity-85 rounded-sm ">
+                            Your details has been submitted successfully!
                         </p>
                     )}
                 </div>
