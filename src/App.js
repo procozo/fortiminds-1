@@ -103,7 +103,7 @@ function App() {
 
 
         </div>
-        <section className="cta" id="get A Demo">
+        <section className="cta" id="Stay updated">
           <CTA />
         </section>
 

@@ -74,7 +74,7 @@ const AspmJourney = () => {
                             {/* Right Section: Text */}
                             <div className="flex-1 text-center lg:text-left">
                                 <h3 className="text-md font-regular uppercase tracking-wide text-black opacity-70 font-secondary">
-                                    PRIORITIZED TAILORED AND ACTIONABI F INSIGHTS
+                                    PRIORITIZED TAILORED AND ACTIONABLE INSIGHTS
                                 </h3>
                                 <h2 className="text-4xl font-medium text-black opacity-85 my-4 font-primary py-2 leading-extra-loose">
                                     Remediate with confidence <br></br> at speed
